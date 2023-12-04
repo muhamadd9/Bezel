@@ -1,0 +1,537 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color:#00C3DA;
+}
+
+/* Utilities */
+.bg-main{
+    background-color: var(--main-color);
+}
+.text-main{
+    color: var(--main-color);
+}
+.btn-main{
+    background-color: var(--main-color);
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+/* navbar */
+nav .logo img{
+    width: 100px;
+}
+nav .nav-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+.navbar{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.262);
+}
+nav .icon-list{
+    position: relative;
+    padding-left: 15px;
+}
+nav .icon-list::before{
+    content: "";
+    height: 185%;
+    width: 1px;
+    background-color:  rgba(255, 255, 255, 0.262);
+    position: absolute;
+    right: 100%;
+    top: -15px;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+
+.nav-link:focus, .nav-link:hover {
+    color: white;
+}
+
+@media screen and (max-width:992px) {
+    nav .icon-list{
+        visibility: hidden;
+    }
+}
+
+/* header */
+header .car-one{
+    background-image:  linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.5)),url(../Images/bg-image-28.jpg);
+    background-position:top;
+    background-size: cover;
+    opacity: 0.9;
+}
+header .car-two{
+    background-image:  linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url(../Images/bg-image-29.jpg);
+    background-position:top;
+    background-size: cover;
+    opacity: 0.9;
+}
+header .btn-main{
+    background-color: var(--main-color);
+    padding: 10px 25px;
+}
+header .btn-main:hover{
+    background-color: var(--main-color);
+}
+header .btn-sec{
+    background-color: transparent;
+    padding: 10px 25px;
+    color: white;
+    transition: 0.5s all;
+}
+header .btn-sec:hover{
+    background-color: white;
+    color: black;
+}
+header .carousel-item.active .btn-hover{
+    transition: 0.5s all ;
+}
+header .carousel-item.active .btn-hover:hover{
+    transform: translateY(-2px);
+}
+header .carousel-item *{
+    transform: scale(0);
+    transition: 0.5s var(--delay) all;
+}
+header .carousel-item.active *{
+
+    transform: scale(1);
+}
+
+header .control-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    position: relative;
+    transition: 0.3s;
+}
+header .control-icon .bg{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+header .control-icon:hover .bg{
+    width: 100%;
+}
+header .control-icon:hover {
+    color: black;
+}
+.home .carousel-control-next, .home .carousel-control-prev{
+    display:block;
+    height: fit-content;
+}
+.home .carousel-control-next{
+    left: -2px;
+    transform: translateY(50%);
+    top:50%;
+}
+
+.home .carousel-control-prev{
+    left: -2px;
+    transform: translateY(-50%);
+    top:50%;
+}
+
+@media screen and (max-width:768px) {
+    .control-icon{
+        visibility: hidden;
+    }
+}
+
+
+/* about */
+
+.about .btn-read{
+    padding: 15px 25px;
+    transition: all 0.5s;
+}
+.about .btn-read:hover{
+    background-color: black;
+    color: white;
+}
+.about .typing::after{
+   content: "";
+   animation-name: typing;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   color: var(--main-color);
+   font-weight: 400;
+}
+
+@keyframes typing {
+    0%{
+        content: "|";
+    }
+    2%{
+        content: "s|";
+    }
+    4%{
+        content: "so|";
+    }
+    6%{
+        content: "soft|";
+    }
+    8%{
+        content: "softw|";
+    }
+    10%{
+        content: "softwa|";
+    }
+    12%{
+        content: "softwar|";
+    }
+    14%{
+        content: "softwar|";
+    }
+    16%{
+        content: "software|";
+    }
+    18%{
+        content: "softwares|";
+    }
+    26%{
+        content: "softwares|";
+    }
+    28%{
+        content: "software|";
+    }
+    30%{
+        content: "softwar|";
+    }
+    32%{
+        content: "softwa|";
+    }
+    34%{
+        content: "softw|";
+    }
+    36%{
+        content: "soft|";
+    }
+    38%{
+        content: "sof|";
+    }
+    40%{
+        content: "so|";
+    }
+    42%{
+        content: "s|";
+    }
+    46%{
+        content: "|";
+    }
+    48%{
+        content: "a|";
+    }
+    50%{
+        content: "ap|";
+    }
+    52%{
+        content: "app|";
+    }
+    54%{
+        content: "apps|";
+    }
+    64%{
+        content: "apps|";
+    }
+    66%{
+        content: "app|";
+    }
+    68%{
+        content: "ap|";
+    }
+    70%{
+        content: "a|";
+    }
+    71%{
+        content: "|";
+    }
+    74%{
+        content: "w|";
+    }
+    75%{
+        content: "we|";
+    }
+    76%{
+        content: "web|";
+    }
+    77%{
+        content: "webs|";
+    }
+    78%{
+        content: "websi|";
+    }
+    79%{
+        content: "websit|";
+    }
+    80%{
+        content: "website|";
+    }
+    81%{
+        content: "websites|";
+    }
+    85%{
+        content: "websites|";
+    }
+    87%{
+        content: "website|";
+    }
+    88%{
+        content: "websit|";
+    }
+    89%{
+        content: "websi|";
+    }
+    90%{
+        content: "webs|";
+    }
+    91%{
+        content: "web|";
+    }
+    92%{
+        content: "we|";
+    }
+    93%{
+        content: "w|";
+    }
+    94%{
+        content: "w|";
+    }
+    95%{
+        content: "|";
+    }
+    100%{
+        content: "|";
+    }
+
+}
+.hr{
+    width: 100%;
+    height:1px;
+    background-color: #787878;
+}
+
+/* Team */
+.team h2{
+    position: relative;
+    z-index: 99;
+}
+.team h2::after{
+    content: "C";
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 2em;
+    z-index: -1;
+    bottom: -10px;
+    opacity: 0.06;
+    
+}
+.team h4{
+    position: relative;
+    font-size: 16px;
+    color: #787878;
+    font-weight: 400;
+}
+.team .member-overlay ul li a {
+    color: white;
+}
+.team-member:hover .member-overlay {
+    top: 0;
+    opacity: 0.9;
+}
+
+.member-overlay {
+    transition: top 0.3s;
+    top: 100%;
+
+}
+
+
+
+
+/*    Services   */
+
+.services{
+    background-color: #1f1f1f;opacity: 0.7;
+}
+.services .service p{
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.services h2::after{
+    content: "W";
+    position: absolute;
+    left: -10px;
+    font-size: 2em;
+    z-index: -1;
+    bottom: -10px;
+    opacity: 0.06;
+    
+}
+.services .icon-circle{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+
+}
+.services ul li{
+    font-size: 14px;
+}
+
+/* pricing */
+.pricing{
+    background-color: #F7F7F7;
+}
+
+.pricing .title h2::after{
+    content: "C";
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 70px;
+    bottom: -10px;
+    opacity: 0.08;
+
+}
+.pricing .title h4{
+    position: relative;
+    font-size: 16px;
+    color: #787878;
+    font-weight: 400;
+}
+.pricing .pricing-head h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+.pricing .resizer button{
+    transition: 0.3s;
+}
+.pricing .resizer button:hover{
+    background-color: var(--main-color);
+    transform: translateY(-2px);
+}
+.pricing .resizer{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+.pricing .resizer.best{
+    transform: scaleY(1.1);
+}
+
+@media screen and (max-width:768px) {
+    .pricing .resizer.best{
+        transform: scaleY(1);
+    }
+    
+}
+
+.pricing .resizer .bvalue{
+    background-color: var(--main-color);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Customers */
+
+.customers .customer-image img{
+    width: 90px;
+    transform: translateY(50%);
+}
+.customers .customer{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+.carousel-indicators.customers-indicators [data-bs-target]{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    margin-top: 20px;
+}
+.customers .cur-control-prev{
+    left: -20%;
+} 
+.customers .cur-control-next{
+    right: -20%;
+} 
+.customers .cur-icon {
+    color: black;
+}
+.customers .cur-icon:hover {
+    color: var(--main-color);
+}
+.cur-control:hover .cur-icon{
+    color: var(--main-color);
+}
+.cur-icon-prev{
+    transition: transform 0.4s;
+}
+.cur-icon-prev:hover{
+    transform: translateX(-2px);
+}
+.cur-icon-next{
+    transition: transform 0.4s;
+}
+.cur-icon-next:hover{
+    transform: translateX(2px);
+}
+
+
+
+/* contact */
+.contact h2{
+    position: relative;
+    z-index: 99;
+}
+.contact h2::after{
+    content: "G";
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 2em;
+    z-index: -1;
+    bottom: -10px;
+    opacity: 0.06;
+    
+}
+.contact h4{
+    position: relative;
+    font-size: 16px;
+    color: #787878;
+    font-weight: 400;
+}
+.contact label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.contact input{
+    border: 1px solid #787878;
+    padding: 10px 20px;
+    margin-top: 3px;
+}
